@@ -4,14 +4,102 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <script src="https://cdn.tailwindcss.com"></script>
-   <title>Shop</title>
+   <title>Tech Store</title>
 </head>
-<body class="bg-gray-800">
-   <div class="nav w-full  bg-gray-900">
+<body class="bg-gray-800 text-white">
+   <nav class="bg-gray-900 p-4 mb-6">
+      <div class="container max-w-6xl mx-auto flex sm:flex-row gap-8 items-center">
+         <!-- Search Area -->
+         <div class="relative w-full">
+            <input type="text" id="search" class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full" placeholder="Searc Products . . . .">
+            <svg 
+               class="absolute left-2 top-1/2 -translate-y-1/2" 
+               xmlns="http://www.w3.org/2000/svg" 
+               fill="none" 
+               viewBox="0 0 24 24" 
+               stroke-width="1.5" 
+               stroke="currentColor" 
+               class="w-6 h-6"
+               width="20"
+               height="20"
+               >
+               <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+             </svg>
+             
+         </div>
 
-   </div>
+         <!-- Cart Icon -->
+         <div class="relative text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+             </svg>
+            <small id="cart-count" class="bg-red-500 rounded-full text-xs text-white absolute  -top-2 -right-2 w-4 h-4">
+               0
+            </small>             
+         </div>
+      </div>
+   </nav>
+
+
+   <main class="flex flex-col md:flex-row mx-auto container max-w-6xl">
+      <div class="space-y-4 p-2 w-full max-w-[10rem]">
+         <h2 class="text-2xl ">Filter</h2>
+         <h3 class="text-xl">Category</h3>
+         <div id="filters-container" class="text-xl space-y-2">
+            <div class="">
+               <input type="checkbox" class="check" id="cameras">
+               <label for="cameras">Cameras</label>
+            </div>
+            <div class="">
+               <input type="checkbox" class="check" id="smartphones">
+               <label for="smartphones">Smartphones</label>
+            </div>
+            <div class="">
+               <input type="checkbox" class="check" id="games">
+               <label for="games">Games</label>
+            </div>
+            <div class="">
+               <input type="checkbox" class="check" id="televisions">
+               <label for="televisions">Televisions</label>
+            </div>
+         </div>
+      </div>
+
+      <!-- Products Wrapper -->
+      <div id="products-wrapper" class="w-full mx-auto grid grid-cols-2 gap-6 max-w-4xl sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4">
+         <!-- <div class="item space-2">
+            <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
+               <img src="/images/playstation_5.png" alt="" class="w-full h-full object-cover">
+               <button class="status bg-black text-white absolute bottom-0 right-0 left-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
+                  Add To Cart
+               </button>
+            </div>
+            <p class="text-xl">Playstaion 5</p>
+            <strong>$499</strong>
+         </div> -->
+         <!-- <div class="item space-2">
+            <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
+               <img src="/images/iphone_14.png" alt="" class="w-full h-full object-cover">
+               <button class="status bg-black text-white absolute bottom-0 right-0 left-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
+                  Add To Cart
+               </button>
+            </div>
+            <p class="text-xl">Iphone 14pro</p>
+            <strong>$499</strong>
+         </div> -->
+         <!-- <div class="item space-2">
+            <div class="bg-gray-100 flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
+               <img src="/images/sony_a7_camera.png" alt="" class="w-full h-full object-cover">
+               <button class="status bg-black text-white absolute bottom-0 right-0 left-0 text-center py-2 translate-y-full transition group-hover:translate-y-0">
+                  Add To Cart
+               </button>
+            </div>
+            <p class="text-xl">Sony A7</p>
+            <strong>$199</strong>
+         </div> -->
+      </div>
+   </main>
    
-
    <script src="./js/app.js"></script>
 </body>
 </html>
